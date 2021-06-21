@@ -30,8 +30,7 @@
 #define COLOR(color)          RGB(((color >> 16) & 0xFF), ((color >> 8) & 0xFF), (color & 0xFF))
 #define HALF(color)           RGB(RED(color) >> 1, GREEN(color) >> 1, BLUE(color) >> 1)
 
-// 16 bit color generator: https://ee-programming-notepad.blogspot.com/2016/10/16-bit-color-generator-picker.html
-// RGB565 color picker:  https://trolsoft.ru/en/articles/rgb565-color-picker
+// see https://ee-programming-notepad.blogspot.com/2016/10/16-bit-color-generator-picker.html
 
 #define COLOR_BLACK           0x0000  // #000000
 #define COLOR_WHITE           0xFFFF  // #FFFFFF
@@ -39,7 +38,7 @@
 #define COLOR_GREY            0x7BEF  // #808080
 #define COLOR_DARKGREY        0x4208  // #404040
 #define COLOR_DARKGREY2       0x39E7  // #303030
-#define COLOR_DARK            0x0003  // #000019
+#define COLOR_DARK            0x0003  // Some dark color
 
 #define COLOR_RED             0xF800  // #FF0000
 #define COLOR_SCARLET         0xF904  // #FF2020
@@ -52,7 +51,7 @@
 #define COLOR_CYAN            0x07FF  // #00FFFF
 #define COLOR_AQUA            0x07FF  // #00FFFF
 #define COLOR_DODGER_BLUE     0x041F  // #0080FF
-#define COLOR_VIVID_VIOLET    0x7933  // #772399
+#define COLOR_VIVID_VIOLET    0x7933 // #772399
 
 #define COLOR_DARK_PURPLE     0x9930  // #992380
 
@@ -68,20 +67,20 @@
 #define COLOR_DARK_ORANGE     0xFC40  // #FF8C00
 #define COLOR_CORAL_RED       0xF9E7  // #FF3F3F
 
-#define COLOR_DARK_PURPLE     0x9930  // #992380
+//#define COLOR_DARK_PURPLE     0x9930  // #992380
 
 #ifndef COLOR_BACKGROUND
-  #define COLOR_BACKGROUND    0x20AC  // #1E156E
+  #define COLOR_BACKGROUND    0x0000  // #1E156E
 #endif
 #ifndef COLOR_SELECTION_BG
-  #define COLOR_SELECTION_BG  0x9930  // #992380
+  #define COLOR_SELECTION_BG    0x4208 // 0x9930  // #992380
 #endif
 #ifndef COLOR_WEBSITE_URL
-  #define COLOR_WEBSITE_URL   0x03B7  // #0075BD
+  #define COLOR_WEBSITE_URL     0x03B7
 #endif
 
 #ifndef COLOR_INACTIVE
-  #define COLOR_INACTIVE          COLOR_GREY
+  #define COLOR_INACTIVE          COLOR_DARKGREY2 // COLOR_GREY
 #endif
 #ifndef COLOR_COLD
   #define COLOR_COLD              COLOR_AQUA
@@ -95,9 +94,6 @@
 #ifndef COLOR_CHAMBER
   #define COLOR_CHAMBER           COLOR_DARK_ORANGE
 #endif
-#ifndef COLOR_COOLER
-  #define COLOR_COOLER            COLOR_DARK_ORANGE
-#endif
 #ifndef COLOR_FAN
   #define COLOR_FAN               COLOR_AQUA
 #endif
@@ -106,11 +102,11 @@
   #define COLOR_AXIS_HOMED        COLOR_WHITE
 #endif
 #ifndef COLOR_AXIS_NOT_HOMED
-  #define COLOR_AXIS_NOT_HOMED    COLOR_YELLOW
+  #define COLOR_AXIS_NOT_HOMED    COLOR_WHITE //COLOR_YELLOW
 #endif
 
 #ifndef COLOR_RATE_100
-  #define COLOR_RATE_100          COLOR_VIVID_GREEN
+  #define COLOR_RATE_100          COLOR_WHITE //COLOR_VIVID_GREEN
 #endif
 #ifndef COLOR_RATE_ALTERED
   #define COLOR_RATE_ALTERED      COLOR_YELLOW
@@ -151,10 +147,10 @@
 #endif
 
 #ifndef COLOR_MENU_TEXT
-  #define COLOR_MENU_TEXT         COLOR_YELLOW
+  #define COLOR_MENU_TEXT         COLOR_WHITE //COLOR_YELLOW
 #endif
 #ifndef COLOR_MENU_VALUE
-  #define COLOR_MENU_VALUE        COLOR_WHITE
+  #define COLOR_MENU_VALUE        COLOR_VIVID_GREEN // COLOR_WHITE
 #endif
 
 #ifndef COLOR_SLIDER
