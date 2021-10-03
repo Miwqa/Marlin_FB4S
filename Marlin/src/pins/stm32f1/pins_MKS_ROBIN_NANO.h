@@ -22,7 +22,7 @@
 #pragma once
 
 /**
- * MKS Robin nano (STM32F130VET6) board pin assignments
+ * MKS Robin nano (STM32F103VET6) board pin assignments
  * https://github.com/makerbase-mks/MKS-Robin-Nano-V1.X/tree/master/hardware
  */
 
@@ -35,6 +35,16 @@
 #define BOARD_INFO_NAME "MKS Robin Nano"
 
 #define BOARD_NO_NATIVE_USB
+
+//#define PRINTER_NAME_FB5
+#define PRINTER_NAME_FB4S
+
+
+#ifdef PRINTER_NAME_FB5
+  #ifdef PRINTER_NAME_FB4S
+    #error "Select only one printer name"
+  #endif
+#endif
 
 // Avoid conflict with TIMER_SERVO when using the STM32 HAL
 #define TEMP_TIMER 5
@@ -184,6 +194,18 @@ https://sergey1560.github.io/fb4s_howto/mks_pwc/
   #define FIL_RUNOUT2_PIN                   PE6
 #endif
 
+#ifdef PRINTER_NAME_FB5
+  #define FIL_RUNOUT_LEVEL  LOW
+#endif 
+
+#ifdef PRINTER_NAME_FB4S
+  #define FIL_RUNOUT_LEVEL  HIGH
+#endif 
+
+#ifndef FIL_RUNOUT_LEVEL
+  #define FIL_RUNOUT_LEVEL HIGH
+#endif
+
 //
 // SD Card
 //
@@ -192,7 +214,7 @@ https://sergey1560.github.io/fb4s_howto/mks_pwc/
 #endif
 
 #define SDIO_SUPPORT
-#define SDIO_CLOCK                       18000000  
+#define SDIO_CLOCK                       4500000  
 #define SD_DETECT_PIN                       PD12
 #define ONBOARD_SD_CS_PIN                   PC11
 
@@ -231,7 +253,7 @@ https://sergey1560.github.io/fb4s_howto/mks_pwc/
   #define TOUCH_BUTTONS_HW_SPI
   #define TOUCH_BUTTONS_HW_SPI_DEVICE          2
 
-  #define TFT_BUFFER_SIZE                  480*10
+  #define TFT_BUFFER_SIZE                  480*8
 #endif
 
 #define HAS_SPI_FLASH                          1
