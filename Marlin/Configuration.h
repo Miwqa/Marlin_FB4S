@@ -1354,7 +1354,7 @@
 #define USR_Z_DIR false
 #endif
 
-#ifdef FB_5_STOCK_
+#ifdef FB_5_STOCK
 #define USR_E0_DIR false
 #define USR_X_DIR false
 #define USR_Y_DIR false
@@ -1362,7 +1362,11 @@
 #endif
 
 #ifdef FB_5_NANO_S_V1_3
-#define USR_E0_DIR false
+#ifdef EXT_EXTRUDER_DRIVER
+  #define USR_E0_DIR true
+#else
+  #define USR_E0_DIR false
+#endif
 #define USR_X_DIR true
 #define USR_Y_DIR true
 #define USR_Z_DIR false
