@@ -54,7 +54,7 @@ namespace Language_ca {
   LSTR MSG_SET_HOME_OFFSETS               = _UxGT("Ajusta decalatge");
   LSTR MSG_HOME_OFFSETS_APPLIED           = _UxGT("Decalatge aplicat");
   LSTR MSG_SET_ORIGIN                     = _UxGT("Estableix origen");
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_PREHEAT_1                    = _UxGT("Preescalfa ") PREHEAT_1_LABEL;
     LSTR MSG_PREHEAT_1_H                  = _UxGT("Preescalfa ") PREHEAT_1_LABEL " ~";
     LSTR MSG_PREHEAT_1_END                = _UxGT("Preescalfa ") PREHEAT_1_LABEL _UxGT(" End");
@@ -183,7 +183,7 @@ namespace Language_ca {
   LSTR MSG_INFO_PROTOCOL                  = _UxGT("Protocol");
   LSTR MSG_CASE_LIGHT                     = _UxGT("Llum");
 
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_INFO_PRINT_COUNT             = _UxGT("Total impressions");
     LSTR MSG_INFO_COMPLETED_PRINTS        = _UxGT("Acabades");
     LSTR MSG_INFO_PRINT_TIME              = _UxGT("Temps imprimint");

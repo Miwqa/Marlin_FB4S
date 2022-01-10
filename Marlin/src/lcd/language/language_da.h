@@ -48,7 +48,7 @@ namespace Language_da {
   LSTR MSG_SET_HOME_OFFSETS               = _UxGT("Sæt forsk. af home");
   LSTR MSG_HOME_OFFSETS_APPLIED           = _UxGT("Forsk. er nu aktiv");
   LSTR MSG_SET_ORIGIN                     = _UxGT("Sæt origin");
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_PREHEAT_1                    = _UxGT("Forvarm ") PREHEAT_1_LABEL;
     LSTR MSG_PREHEAT_1_H                  = _UxGT("Forvarm ") PREHEAT_1_LABEL " ~";
     LSTR MSG_PREHEAT_1_END                = _UxGT("Forvarm ") PREHEAT_1_LABEL _UxGT(" end");
@@ -156,7 +156,7 @@ namespace Language_da {
   LSTR MSG_INFO_BOARD_MENU                = _UxGT("Kort Info");
   LSTR MSG_INFO_THERMISTOR_MENU           = _UxGT("Thermistors");
 
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_INFO_PRINT_COUNT             = _UxGT("Ant. Prints");
     LSTR MSG_INFO_COMPLETED_PRINTS        = _UxGT("Færdige");
     LSTR MSG_INFO_PRINT_TIME              = _UxGT("Total print tid");

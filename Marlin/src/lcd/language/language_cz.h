@@ -60,7 +60,7 @@ namespace Language_cz {
   LSTR MSG_RUN_AUTO_FILES                 = _UxGT("Autostart");
   LSTR MSG_DISABLE_STEPPERS               = _UxGT("Uvolnit motory");
   LSTR MSG_DEBUG_MENU                     = _UxGT("Nabídka ladění");
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_PROGRESS_BAR_TEST            = _UxGT("Test ukaz. průběhu");
   #else
     LSTR MSG_PROGRESS_BAR_TEST            = _UxGT("Test uk. průběhu");
@@ -78,7 +78,7 @@ namespace Language_cz {
   LSTR MSG_SET_HOME_OFFSETS               = _UxGT("Nastavit ofsety");
   LSTR MSG_HOME_OFFSETS_APPLIED           = _UxGT("Ofsety nastaveny");
   LSTR MSG_SET_ORIGIN                     = _UxGT("Nastavit počátek");
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_PREHEAT_1                    = _UxGT("Zahřát ") PREHEAT_1_LABEL;
     LSTR MSG_PREHEAT_1_H                  = _UxGT("Zahřát ") PREHEAT_1_LABEL " ~";
     LSTR MSG_PREHEAT_1_END                = _UxGT("Zahřát ") PREHEAT_1_LABEL _UxGT(" end");
@@ -129,9 +129,8 @@ namespace Language_cz {
   LSTR MSG_IDEX_MODE_DUPLICATE            = _UxGT("Duplikace");
   LSTR MSG_IDEX_MODE_MIRRORED_COPY        = _UxGT("Zrcadlení");
   LSTR MSG_IDEX_MODE_FULL_CTRL            = _UxGT("Plná kontrola");
-  LSTR MSG_HOTEND_OFFSET_X                = _UxGT("2. tryska X");
-  LSTR MSG_HOTEND_OFFSET_Y                = _UxGT("2. tryska Y");
   LSTR MSG_HOTEND_OFFSET_Z                = _UxGT("2. tryska Z");
+  LSTR MSG_HOTEND_OFFSET_A                = _UxGT("2. tryska @");
 
   LSTR MSG_UBL_DOING_G29                  = _UxGT("Provádím G29");
   LSTR MSG_UBL_TOOLS                      = _UxGT("UBL nástroje");
@@ -154,7 +153,7 @@ namespace Language_cz {
   LSTR MSG_UBL_DONE_EDITING_MESH          = _UxGT("Konec úprav sítě");
   LSTR MSG_UBL_BUILD_CUSTOM_MESH          = _UxGT("Vlastní síť");
   LSTR MSG_UBL_BUILD_MESH_MENU            = _UxGT("Vytvořit síť");
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_UBL_BUILD_MESH_M             = _UxGT("Síť bodů $");
     LSTR MSG_UBL_VALIDATE_MESH_M          = _UxGT("Kontrola sítě $");
   #endif
@@ -422,12 +421,12 @@ namespace Language_cz {
   LSTR MSG_PLEASE_RESET                   = _UxGT("Proveďte reset");
   LSTR MSG_HEATING                        = _UxGT("Zahřívání...");
   LSTR MSG_COOLING                        = _UxGT("Chlazení...");
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_BED_HEATING                  = _UxGT("Zahřívání podložky");
   #else
     LSTR MSG_BED_HEATING                  = _UxGT("Zahřívání podl.");
   #endif
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_BED_COOLING                  = _UxGT("Chlazení podložky");
   #else
     LSTR MSG_BED_COOLING                  = _UxGT("Chlazení podl.");
@@ -466,7 +465,7 @@ namespace Language_cz {
   LSTR MSG_CASE_LIGHT_BRIGHTNESS          = _UxGT("Jas světla");
   LSTR MSG_KILL_EXPECTED_PRINTER          = _UxGT("NESPRÁVNÁ TISKÁRNA");
 
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_INFO_PRINT_COUNT             = _UxGT("Počet tisků");
     LSTR MSG_INFO_COMPLETED_PRINTS        = _UxGT("Dokončeno");
     LSTR MSG_INFO_PRINT_TIME              = _UxGT("Celkový čas");
@@ -536,7 +535,7 @@ namespace Language_cz {
   LSTR MSG_CYCLE_MIX                      = _UxGT("Střídat mix");
   LSTR MSG_GRADIENT_MIX                   = _UxGT("Přechod mix");
   LSTR MSG_REVERSE_GRADIENT               = _UxGT("Opačný přechod");
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_ACTIVE_VTOOL                 = _UxGT("Aktivní V-nástroj");
     LSTR MSG_START_VTOOL                  = _UxGT("Spustit V-nástroj");
     LSTR MSG_END_VTOOL                    = _UxGT("Ukončit V-nástroj");

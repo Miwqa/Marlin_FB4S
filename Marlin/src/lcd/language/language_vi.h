@@ -64,7 +64,7 @@ namespace Language_vi {
   LSTR MSG_SET_HOME_OFFSETS               = _UxGT("Đặt bù đắp nhà");                       // Set home offsets
   LSTR MSG_HOME_OFFSETS_APPLIED           = _UxGT("Bù đắp được áp dụng");                  // Offsets applied
   LSTR MSG_SET_ORIGIN                     = _UxGT("Đặt nguồn gốc");                        // Set origin
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_PREHEAT_1                    = _UxGT("Làm nóng ") PREHEAT_1_LABEL _UxGT(" trước");      // Preheat
     LSTR MSG_PREHEAT_1_H                  = _UxGT("Làm nóng ") PREHEAT_1_LABEL _UxGT(" trước ~");    // Preheat
     LSTR MSG_PREHEAT_1_END                = _UxGT("Làm nóng ") PREHEAT_1_LABEL _UxGT(" Đầu");
@@ -126,7 +126,7 @@ namespace Language_vi {
   LSTR MSG_UBL_DONE_EDITING_MESH          = _UxGT("Chỉnh sửa xong lưới");                  // Done Editing Mesh
   LSTR MSG_UBL_BUILD_CUSTOM_MESH          = _UxGT("Xây dựng lưới tự chọn");                // Build Custom Mesh
   LSTR MSG_UBL_BUILD_MESH_MENU            = _UxGT("Xây dựng lưới");                        // Build Mesh
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_UBL_BUILD_MESH_M             = _UxGT("Xây dựng lưới ($)");
     LSTR MSG_UBL_VALIDATE_MESH_M          = _UxGT("Thẩm tra lưới ($)");
   #endif
@@ -383,7 +383,7 @@ namespace Language_vi {
   LSTR MSG_INFO_PROTOCOL                  = _UxGT("Giao Thức");                            // Protocol
   LSTR MSG_CASE_LIGHT                     = _UxGT("Đèn Khuông");                           // Case light
   LSTR MSG_CASE_LIGHT_BRIGHTNESS          = _UxGT("Độ Sáng");                              // Light Brightness
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_INFO_PRINT_COUNT             = _UxGT("Số In");                                // Print Count
     LSTR MSG_INFO_COMPLETED_PRINTS        = _UxGT("Đã hoàn thành");
     LSTR MSG_INFO_PRINT_TIME              = _UxGT("Tổng số thời gian in");                // Total print time

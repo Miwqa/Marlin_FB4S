@@ -47,7 +47,7 @@ namespace Language_hu {
   LSTR MSG_MEDIA_INSERTED                 = _UxGT("Tároló behelyezve");
   LSTR MSG_MEDIA_REMOVED                  = _UxGT("Tároló eltávolítva");
   LSTR MSG_MEDIA_WAITING                  = _UxGT("Várakozás a tárolóra");
-  LSTR MSG_SD_INIT_FAIL                   = _UxGT("SD-kártya hiba");
+  LSTR MSG_MEDIA_INIT_FAIL                = _UxGT("Tároló-kártya hiba");
   LSTR MSG_MEDIA_READ_ERROR               = _UxGT("Tároló olvasási hiba");
   LSTR MSG_MEDIA_USB_REMOVED              = _UxGT("USB eltávolítva");
   LSTR MSG_MEDIA_USB_FAILED               = _UxGT("USB eszköz hiba");
@@ -62,12 +62,10 @@ namespace Language_hu {
   LSTR MSG_DEBUG_MENU                     = _UxGT("Hiba Menü");
   LSTR MSG_PROGRESS_BAR_TEST              = _UxGT("Haladás sáv teszt");
   LSTR MSG_AUTO_HOME                      = _UxGT("X-Y-Z auto kezdöpont");
+  LSTR MSG_AUTO_HOME_A                    = _UxGT("Kezdö @");
   LSTR MSG_AUTO_HOME_X                    = _UxGT("X kezdöpont");
   LSTR MSG_AUTO_HOME_Y                    = _UxGT("Y kezdöpont");
   LSTR MSG_AUTO_HOME_Z                    = _UxGT("Z kezdöpont");
-  LSTR MSG_AUTO_HOME_I                    = _UxGT("Kezdö ") LCD_STR_I;
-  LSTR MSG_AUTO_HOME_J                    = _UxGT("Kezdö ") LCD_STR_J;
-  LSTR MSG_AUTO_HOME_K                    = _UxGT("Kezdö ") LCD_STR_K;
   LSTR MSG_AUTO_Z_ALIGN                   = _UxGT("Auto Z-igazítás");
   LSTR MSG_ITERATION                      = _UxGT("G34 Ismétlés: %i");
   LSTR MSG_DECREASING_ACCURACY            = _UxGT("Pontosság csökken!");
@@ -89,7 +87,7 @@ namespace Language_hu {
   LSTR MSG_TRAMMING_WIZARD                = _UxGT("Elektromos varázsló");
   LSTR MSG_SELECT_ORIGIN                  = _UxGT("Eredeti választása");
   LSTR MSG_LAST_VALUE_SP                  = _UxGT("Utolsó érték ");
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_PREHEAT_1                    = _UxGT("Fütés ") PREHEAT_1_LABEL;
     LSTR MSG_PREHEAT_1_H                  = _UxGT("Fütés ") PREHEAT_1_LABEL " ~";
     LSTR MSG_PREHEAT_1_END                = _UxGT("Fütés ") PREHEAT_1_LABEL _UxGT(" Fej");
@@ -156,9 +154,8 @@ namespace Language_hu {
   LSTR MSG_IDEX_MODE_MIRRORED_COPY        = _UxGT("Tükrözött másolás");
   LSTR MSG_IDEX_MODE_FULL_CTRL            = _UxGT("Teljes felügyelet");
   LSTR MSG_IDEX_DUPE_GAP                  = _UxGT("X-hézag másolása");
-  LSTR MSG_HOTEND_OFFSET_X                = _UxGT("2. fej X");
-  LSTR MSG_HOTEND_OFFSET_Y                = _UxGT("2. fej Y");
   LSTR MSG_HOTEND_OFFSET_Z                = _UxGT("2. fej Z");
+  LSTR MSG_HOTEND_OFFSET_A                = _UxGT("2. fej @");
   LSTR MSG_UBL_DOING_G29                  = _UxGT("Szintezz! G29");
   LSTR MSG_UBL_TOOLS                      = _UxGT("UBL eszköz");
   LSTR MSG_UBL_LEVEL_BED                  = _UxGT("Egységes ágy szint");
@@ -554,7 +551,7 @@ namespace Language_hu {
   LSTR MSG_CASE_LIGHT_BRIGHTNESS          = _UxGT("Fényerösség");
   LSTR MSG_KILL_EXPECTED_PRINTER          = _UxGT("HELYTELEN NYOMTATÓ");
 
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_INFO_PRINT_COUNT             = _UxGT("Nyomtatás számláló");
     LSTR MSG_INFO_COMPLETED_PRINTS        = _UxGT("Befejezett");
     LSTR MSG_INFO_PRINT_TIME              = _UxGT("Összes nyomtatási idö");

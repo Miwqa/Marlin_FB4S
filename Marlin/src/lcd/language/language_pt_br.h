@@ -68,7 +68,7 @@ namespace Language_pt_br {
   LSTR MSG_SET_HOME_OFFSETS               = _UxGT("Compensar origem");
   LSTR MSG_HOME_OFFSETS_APPLIED           = _UxGT("Alteração aplicada");
   LSTR MSG_SET_ORIGIN                     = _UxGT("Ajustar Origem");
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_PREHEAT_1                    = _UxGT("Pre-aquecer ") PREHEAT_1_LABEL;
     LSTR MSG_PREHEAT_1_H                  = _UxGT("Pre-aquecer ") PREHEAT_1_LABEL " ~";
     LSTR MSG_PREHEAT_1_END                = _UxGT("Extrusora ") PREHEAT_1_LABEL;
@@ -111,9 +111,8 @@ namespace Language_pt_br {
   LSTR MSG_IDEX_MODE_DUPLICATE            = _UxGT("Duplicação");
   LSTR MSG_IDEX_MODE_MIRRORED_COPY        = _UxGT("Cópia espelhada");
   LSTR MSG_IDEX_MODE_FULL_CTRL            = _UxGT("Controle Total");
-  LSTR MSG_HOTEND_OFFSET_X                = _UxGT("2o bico X");
-  LSTR MSG_HOTEND_OFFSET_Y                = _UxGT("2o bico Y");
   LSTR MSG_HOTEND_OFFSET_Z                = _UxGT("2o bico Z");
+  LSTR MSG_HOTEND_OFFSET_A                = _UxGT("2o bico @");
   LSTR MSG_UBL_DOING_G29                  = _UxGT("Executando G29");
   LSTR MSG_UBL_TOOLS                      = _UxGT("Ferramentas UBL");
   LSTR MSG_UBL_LEVEL_BED                  = _UxGT("Nivel. Mesa Unif.");
@@ -134,7 +133,7 @@ namespace Language_pt_br {
   LSTR MSG_UBL_DONE_EDITING_MESH          = _UxGT("Fim da Edição");
   LSTR MSG_UBL_BUILD_CUSTOM_MESH          = _UxGT("Montar Malha Custom");
   LSTR MSG_UBL_BUILD_MESH_MENU            = _UxGT("Montar ");
-  #if PREHEAT_COUNT
+  #if HAS_PREHEAT
     LSTR MSG_UBL_BUILD_MESH_M             = _UxGT("Montar $");
     LSTR MSG_UBL_VALIDATE_MESH_M          = _UxGT("Checar $");
   #endif
@@ -401,7 +400,7 @@ namespace Language_pt_br {
   LSTR MSG_CASE_LIGHT_BRIGHTNESS          = _UxGT("Intensidade Brilho");
   LSTR MSG_KILL_EXPECTED_PRINTER          = _UxGT("Impressora Incorreta");
 
-  #if LCD_WIDTH >= 20
+  #if LCD_WIDTH >= 20 || HAS_DWIN_E3V2
     LSTR MSG_INFO_PRINT_COUNT             = _UxGT("Total de Impressões");
     LSTR MSG_INFO_COMPLETED_PRINTS        = _UxGT("Realizadas");
     LSTR MSG_INFO_PRINT_TIME              = _UxGT("Tempo de Impressão");
